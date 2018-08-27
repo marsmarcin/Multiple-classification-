@@ -10,6 +10,7 @@ Multiple classification with Small amount of data
 ====
     
   对于这类问题首先想到的就是传统的机器学习方法SVM，再比较新颖的是lasso还有xgboost等方法。对于SVM分类器直接将特征送入模型中，用不超过70% 的数据训练，用剩余的数据进行测试。对于xgboost可以直接进行处理。对于lasso，我将准备用于特征降维与特征选择，将选择后的特征送入xgboost进行学习。
+  
 SVM 三分类
 ====
     
@@ -18,6 +19,7 @@ SVM 三分类
 ![Image text](https://github.com/marsmarcin/Multiple-classification-/blob/master/pictures/Table1.png)
     
   在数据处理的时候将空值置为0，将label放在数据的第一列，并保存为csv格式文件。训练集文件名为data_two_test.csv，测试集文件为data_two_test.csv。
+  
 训练过程与测试结果
 ===
     
@@ -31,6 +33,7 @@ SVM 三分类
 图2.svm三分类四次测试训练结果
     
   虽然三分类具有较高的精度，但是这并不是我们想得到的结果。想象病人得知自己得了某种确定的心脏病，但是还不知道是哪一种确定的心脏病，无论是心情还是对于整个治疗都没有什么帮助。但是三分类对于医生做进一步的诊断提供了有效且高精度的参考，如果患者得了某种确定的心脏病，仍需人工的介入才能得到准确的诊断。
+  
 Xgboost + Lasso六分类
 ====
     
@@ -40,6 +43,7 @@ Xgboost + Lasso六分类
     
   要是考虑到不确定的心脏病类型仅有22个样本，所以我对确定的心脏病类型的185个样本重新分组得到六分类的结果。
 ![Image text](https://github.com/marsmarcin/Multiple-classification-/blob/master/pictures/Table2.png)
+
 训练过程与测试结果
 ===
     
@@ -48,6 +52,7 @@ Xgboost + Lasso六分类
 ![Image text](https://github.com/marsmarcin/Multiple-classification-/blob/master/pictures/Table3.png)
     
   在第二组实验中，使用特征从279维降到25维准确率比没有使用特征选择时降低了。第三组实验中特征从279维降到30维，准确率有所提高。第四组实验将特征维度降低到36维，准确率已经比没有降低特征维度要高。所以使用特征选择可以有效的提升分类的准确度。
+  
 SVM 十三分类
 ====
     
@@ -58,6 +63,7 @@ SVM 十三分类
 图4.排名前50和后50的特征得分情况
   
   这个小节的实验将分成两个部分，一个是没有进行特征选择的svm分类器，一个是进行特征选择的svm分类器。
+  
 训练过程与测试结果
 ===
 实验一
@@ -67,6 +73,7 @@ SVM 十三分类
 ![Image text](https://github.com/marsmarcin/Multiple-classification-/blob/master/pictures/pic5.png)
 图5.四组svm13分类训练结果
   测试结果准确率分别是0.86100006、0.796、0.88500005、0.80200005。
+  
 实验二
 ==
     
@@ -75,6 +82,7 @@ SVM 十三分类
 图6.四组20个特征的svm13分类训练结果
     
   测试结果分别为0.8549999、0.8809999、0.82、0.857。个人感觉对比不明显，我将迭代次数从100升至1000。没有进行特征选择，做了两组实验结果分别为0.897、0.866。进行了特征选择的结果分别是0.916、0.896我将迭代次数上升至10000次，没有进行特征选择的测试精度分别为0.872、0.77，进行了特征选择的0.878、0.866。
+  
 总结
 ====
     
