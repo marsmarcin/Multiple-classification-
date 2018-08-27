@@ -1,5 +1,3 @@
-# Multiple-classification-
-Multiple classification with Small amount of data
 
 问题陈述
 ====
