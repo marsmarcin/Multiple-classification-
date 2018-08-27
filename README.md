@@ -99,7 +99,8 @@ SVM 十三分类
 ====
     
   整个实验的实现以及完成是在不断学习和改进的过程中进行的。从前期模型论证，到特征工程是不断的实验论证，改代码的过程。尤其是最近实验室换电脑来回折腾耽搁了很多工作，思路也从svm转移到了xgboost，还有laasso。之所以从xgboost又回到svm是因为做了一些实验发现精度很难提高，尤其是在svm还保持比较高的精度的前提下，xgboost的精度仍然在0.6左右徘徊时，毅然放弃了使用xgboost方法。
- ![Image text](https://github.com/marsmarcin/Multiple-classification-/blob/master/pictures/pic7.png)
+  
+![Image text](https://github.com/marsmarcin/Multiple-classification-/blob/master/pictures/pic7.png)
  
  
  图7.整个实验思路
