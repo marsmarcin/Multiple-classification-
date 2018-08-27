@@ -9,12 +9,12 @@ Problem statement
 problem analysis
 ====
     
- The first thing that comes to mind about this type of problem is the traditional machine learning method SVM, and the more novel ones are lasso and xgboost. For the SVM classifier, the feature is directly sent to the model, trained with no more than 70% of the data, and tested with the remaining data. For xgboost you can handle it directly. For lasso, I will prepare for feature dimension reduction and feature selection, and send the selected features to xgboost for learning.
+  The first thing that comes to mind about this type of problem is the traditional machine learning method SVM, and the more novel ones are lasso and xgboost. For the SVM classifier, the feature is directly sent to the model, trained with no more than 70% of the data, and tested with the remaining data. For xgboost you can handle it directly. For lasso, I will prepare for feature dimension reduction and feature selection, and send the selected features to xgboost for learning.
   
 SVM three classification
 ====
     
- Because it is a two-category problem from the point of view of illness and disease, but considering that there is an uncertain type of heart disease, the problem can be seen as a three-category problem. First, the data set is divided into a training set and a test set, wherein the number of samples in the training set is 310, and the number of samples in the test set is 142.
+  Because it is a two-category problem from the point of view of illness and disease, but considering that there is an uncertain type of heart disease, the problem can be seen as a three-category problem. First, the data set is divided into a training set and a test set, wherein the number of samples in the training set is 310, and the number of samples in the test set is 142.
 
 ![Image text](https://github.com/marsmarcin/Multiple-classification-/blob/master/pictures/Table1.png)
     
@@ -32,7 +32,8 @@ Training process and test results
   
 ![Image text](https://github.com/marsmarcin/Multiple-classification-/blob/master/pictures/pic2.png)
     
- Although the three classifications have higher precision, this is not the result we want. Imagine that the patient knows that he has a certain heart disease, but he still doesn't know which type of heart disease he has. It doesn't help the mood or the whole treatment. However, the three classifications provide an effective and highly accurate reference for doctors to further diagnose. If the patient has a certain type of heart disease, manual intervention is required to obtain an accurate diagnosis.
+  
+  Although the three classifications have higher precision, this is not the result we want. Imagine that the patient knows that he has a certain heart disease, but he still doesn't know which type of heart disease he has. It doesn't help the mood or the whole treatment. However, the three classifications provide an effective and highly accurate reference for doctors to further diagnose. If the patient has a certain type of heart disease, manual intervention is required to obtain an accurate diagnosis.
   
 Xgboost + Lasso six classification
 ====
